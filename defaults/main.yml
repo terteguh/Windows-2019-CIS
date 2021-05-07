@@ -47,7 +47,8 @@ win_skip_for_test: false
 # PLEASE NOTE: These work in coordination with the cat1, cat2, cat3 group variables. You must enable an entire group
 # in order for the variables below to take effect.
 
-# section01
+# Section 1 Toggles
+# Section 1 is Account Polies (Password Policy and Account Lockout Policy)
 rule_1_1_1: true
 rule_1_1_2: true
 rule_1_1_3: true
@@ -58,7 +59,8 @@ rule_1_2_1: true
 rule_1_2_2: true
 rule_1_2_3: true
 
-# section02
+# Section 2 Toggles
+# Section 2 is Local Polices (User Rights Assignment and Security Options)
 rule_2_2_1: true
 rule_2_2_2: true
 rule_2_2_3: true
@@ -178,7 +180,8 @@ rule_2_3_17_6: true
 rule_2_3_17_7: true
 rule_2_3_17_8: true
 
-# section09
+# Section 9 Toggles
+# Section 9 is Windows Firewall with Advanced Security (Domain Profile, Private Profile, and Public Profile)
 rule_9_1_1: true
 rule_9_1_2: true
 rule_9_1_3: true
@@ -206,7 +209,9 @@ rule_9_3_8: true
 rule_9_3_9: true
 rule_9_3_10: true
 
-# section17
+# Section 17 Toggles
+# Section 17 is Advanced Audit Policy Configuration (Account Login, Account Management, Detailed Tracking, DS Access, Logon/Logoff, Object Access,
+# Policy Change, Privilege Use, and System)
 rule_17_1_1: true
 rule_17_1_2: true
 rule_17_1_3: true
@@ -242,7 +247,8 @@ rule_17_9_3: true
 rule_17_9_4: true
 rule_17_9_5: true
 
-# section18
+# Section 18 Toggles
+# Section 18 is Administrative Templates (Control Panel, LAPS, MS Security Guide, MSS, Network, Start Menu and Task Bar, System, and Windows Components)
 rule_18_1_1_1: true
 rule_18_1_1_2: true
 rule_18_1_2_2: true
@@ -428,7 +434,8 @@ rule_18_9_102_2: true
 rule_18_9_102_3: true
 rule_18_9_102_4: true
 
-# section19
+# Section 19 Toggle
+# Section 19 is Administrative Templates (Personalization, Start Menu and Taskbar, System, and Windows Components)
 rule_19_1_3_1: true
 rule_19_1_3_2: true
 rule_19_1_3_3: true

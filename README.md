@@ -2,7 +2,7 @@ Windows Server 2019 CIS
 =========
 ![Release](https://img.shields.io/github/v/release/ansible-lockdown/Windows-2019-CIS?style=plastic)
 
-Configure a Windows Server 2019 system to be CIS compliant. All findings will be audited by default. Non-disruptive Section 1, Section 2, Section 9, Section 17, Section 18, and Section 19 findings will be corrected by default.
+Configure a Windows Server 2019 system to be [CIS](https://www.cisecurity.org/cis-benchmarks/) v1.2.0 (03-31-2021) compliant. There are some intrusive tasks that have a toggle in defaults main.yml to disable to automated fix
 
 Caution(s)
 -------

@@ -1,6 +1,6 @@
 ---
 galaxy_info:
-    author: "Ryan Speelman"
+    author: "Ryan Speelman, George Nalen, Mark Bolwell"
     description: "Ansible role to apply Windows Server 2019 CIS Benchmark"
     company: "MindPoint Group"
     license: MIT

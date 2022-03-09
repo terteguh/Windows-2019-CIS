@@ -1,14 +1,14 @@
 ---
-- name: "19.1.3.1 | PATCH | L1 | Ensure Enable screen saver is set to Enabled"
+- name: "19.1.3.1 | PATCH | Ensure Enable screen saver is set to Enabled"
   block:
-      - name: "19.1.3.1 | PATCH | L1 | Ensure Enable screen saver is set to Enabled"
+      - name: "19.1.3.1 | PATCH | Ensure Enable screen saver is set to Enabled"
         win_regedit:
             path: HKU:\.DEFAULT\Software\Policies\Microsoft\Windows\Control Panel\Desktop
             name: ScreenSaveActive
             data: 1
             type: string
 
-      - name: "19.1.3.1 | PATCH | L1 | Ensure Enable screen saver is set to Enabled"
+      - name: "19.1.3.1 | PATCH | Ensure Enable screen saver is set to Enabled"
         win_regedit:
             path: HKCU:\Software\Policies\Microsoft\Windows\Control Panel\Desktop
             name: ScreenSaveActive
@@ -22,16 +22,16 @@
       - rule_19.1.3.1
       - patch
 
-- name: "19.1.3.2 | PATCH | L1 | Ensure Force specific screen saver Screen saver executable name is set to Enabled scrnsave.scr"
+- name: "19.1.3.2 | PATCH | Ensure Force specific screen saver Screen saver executable name is set to Enabled scrnsave.scr"
   block:
-      - name: "19.1.3.2 | PATCH | L1 | Ensure Force specific screen saver Screen saver executable name is set to Enabled scrnsave.scr"
+      - name: "19.1.3.2 | PATCH | Ensure Force specific screen saver Screen saver executable name is set to Enabled scrnsave.scr"
         win_regedit:
             path: HKU:\.DEFAULT\Software\Policies\Microsoft\Windows\Control Panel\Desktop
             name: SCRNSAVE.EXE
             data: scrnsave.scr
             type: string
 
-      - name: "19.1.3.2 | PATCH | L1 | Ensure Force specific screen saver Screen saver executable name is set to Enabled scrnsave.scr"
+      - name: "19.1.3.2 | PATCH | Ensure Force specific screen saver Screen saver executable name is set to Enabled scrnsave.scr"
         win_regedit:
             path: HKCU:\Software\Policies\Microsoft\Windows\Control Panel\Desktop
             name: SCRNSAVE.EXE
@@ -45,16 +45,16 @@
       - rule_19.1.3.2
       - patch
 
-- name: "19.1.3.3 | PATCH | L1 | Ensure Password protect the screen saver is set to Enabled"
+- name: "19.1.3.3 | PATCH | Ensure Password protect the screen saver is set to Enabled"
   block:
-      - name: "19.1.3.3 | PATCH | L1 | Ensure Password protect the screen saver is set to Enabled"
+      - name: "19.1.3.3 | PATCH | Ensure Password protect the screen saver is set to Enabled"
         win_regedit:
             path: HKU:\.DEFAULT\Software\Policies\Microsoft\Windows\Control Panel\Desktop
             name: ScreenSaverIsSecure
             data: 1
             type: string
 
-      - name: "19.1.3.3 | PATCH | L1 | Ensure Password protect the screen saver is set to Enabled"
+      - name: "19.1.3.3 | PATCH | Ensure Password protect the screen saver is set to Enabled"
         win_regedit:
             path: HKCU:\Software\Policies\Microsoft\Windows\Control Panel\Desktop
             name: ScreenSaverIsSecure
@@ -68,16 +68,16 @@
       - rule_19.1.3.3
       - patch
 
-- name: "19.1.3.4 | PATCH | L1 | Ensure Screen saver timeout is set to Enabled 900 seconds or fewer but not 0"
+- name: "19.1.3.4 | PATCH | Ensure Screen saver timeout is set to Enabled 900 seconds or fewer but not 0"
   block:
-      - name: "19.1.3.4 | PATCH | L1 | Ensure Screen saver timeout is set to Enabled 900 seconds or fewer but not 0"
+      - name: "19.1.3.4 | PATCH | Ensure Screen saver timeout is set to Enabled 900 seconds or fewer but not 0"
         win_regedit:
             path: HKU:\.DEFAULT\Software\Policies\Microsoft\Windows\Control Panel\Desktop
             name: ScreenSaveTimeOut
             data: 900
             type: string
 
-      - name: "19.1.3.4 | PATCH | L1 | Ensure Screen saver timeout is set to Enabled 900 seconds or fewer but not 0"
+      - name: "19.1.3.4 | PATCH | Ensure Screen saver timeout is set to Enabled 900 seconds or fewer but not 0"
         win_regedit:
             path: HKCU:\Software\Policies\Microsoft\Windows\Control Panel\Desktop
             name: ScreenSaveTimeOut
@@ -91,16 +91,16 @@
       - rule_19.1.3.4
       - patch
 
-- name: "19.5.1.1 | PATCH | L1 | Ensure Turn off toast notifications on the lock screen is set to Enabled"
+- name: "19.5.1.1 | PATCH | Ensure Turn off toast notifications on the lock screen is set to Enabled"
   block:
-      - name: "19.5.1.1 | PATCH | L1 | Ensure Turn off toast notifications on the lock screen is set to Enabled"
+      - name: "19.5.1.1 | PATCH | Ensure Turn off toast notifications on the lock screen is set to Enabled"
         win_regedit:
             path: HKU:\.DEFAULT\Software\Policies\Microsoft\Windows\Currentversion\Pushnotifications
             name: NoToastApplicationNotificationOnLockScreen
             data: 1
             type: dword
 
-      - name: "19.5.1.1 | PATCH | L1 | Ensure Turn off toast notifications on the lock screen is set to Enabled"
+      - name: "19.5.1.1 | PATCH | Ensure Turn off toast notifications on the lock screen is set to Enabled"
         win_regedit:
             path: HKCU:\Software\Policies\Microsoft\Windows\Currentversion\Pushnotifications
             name: NoToastApplicationNotificationOnLockScreen
@@ -114,16 +114,16 @@
       - rule_19.5.1.1
       - patch
 
-- name: "19.6.6.1.1 | PATCH | L2 | Ensure Turn off Help Experience Improvement Program is set to Enabled"
+- name: "19.6.6.1.1 | PATCH | Ensure Turn off Help Experience Improvement Program is set to Enabled"
   block:
-      - name: "19.6.6.1.1 | PATCH | L2 | Ensure Turn off Help Experience Improvement Program is set to Enabled"
+      - name: "19.6.6.1.1 | PATCH | Ensure Turn off Help Experience Improvement Program is set to Enabled"
         win_regedit:
             path: HKU:\.DEFAULT\Software\Policies\Microsoft\Assistance\Client\1.0
             name: NoImplicitFeedback
             data: 1
             type: dword
 
-      - name: "19.6.6.1.1 | PATCH | L2 | Ensure Turn off Help Experience Improvement Program is set to Enabled"
+      - name: "19.6.6.1.1 | PATCH | Ensure Turn off Help Experience Improvement Program is set to Enabled"
         win_regedit:
             path: HKCU:\Software\Policies\Microsoft\Assistance\Client\1.0
             name: NoImplicitFeedback
@@ -137,16 +137,16 @@
       - rule_19.6.6.1.1
       - patch
 
-- name: "19.7.4.1 | PATCH | L1 | Ensure Do not preserve zone information in file attachments is set to Disabled"
+- name: "19.7.4.1 | PATCH | Ensure Do not preserve zone information in file attachments is set to Disabled"
   block:
-      - name: "19.7.4.1 | PATCH | L1 | Ensure Do not preserve zone information in file attachments is set to Disabled"
+      - name: "19.7.4.1 | PATCH | Ensure Do not preserve zone information in file attachments is set to Disabled"
         win_regedit:
             path: HKU:\.DEFAULT\Software\Microsoft\Windows\CurrentVersion\Policies\Attachments
             name: SaveZoneInformation
             data: 2
             type: dword
 
-      - name: "19.7.4.1 | PATCH | L1 | Ensure Do not preserve zone information in file attachments is set to Disabled"
+      - name: "19.7.4.1 | PATCH | Ensure Do not preserve zone information in file attachments is set to Disabled"
         win_regedit:
             path: HKCU:\Software\Microsoft\Windows\CurrentVersion\Policies\Attachments
             name: SaveZoneInformation
@@ -160,16 +160,16 @@
       - rule_19.7.4.1
       - patch
 
-- name: "19.7.4.2 | PATCH | L1 | Ensure Notify antivirus programs when opening attachments is set to Enabled"
+- name: "19.7.4.2 | PATCH | Ensure Notify antivirus programs when opening attachments is set to Enabled"
   block:
-      - name: "19.7.4.2 | PATCH | L1 | Ensure Notify antivirus programs when opening attachments is set to Enabled"
+      - name: "19.7.4.2 | PATCH | Ensure Notify antivirus programs when opening attachments is set to Enabled"
         win_regedit:
             path: HKU:\.DEFAULT\Software\Microsoft\Windows\Currentversion\Policies\Attachments
             name: ScanWithAntiVirus
             data: 3
             type: dword
 
-      - name: "19.7.4.2 | PATCH | L1 | Ensure Notify antivirus programs when opening attachments is set to Enabled"
+      - name: "19.7.4.2 | PATCH | Ensure Notify antivirus programs when opening attachments is set to Enabled"
         win_regedit:
             path: HKCU:\Software\Microsoft\Windows\Currentversion\Policies\Attachments
             name: ScanWithAntiVirus
@@ -183,16 +183,16 @@
       - rule_19.7.4.2
       - patch
 
-- name: "19.7.8.1 | PATCH | L1 | Ensure Configure Windows spotlight on lock screen is set to Disabled"
+- name: "19.7.8.1 | PATCH | Ensure Configure Windows spotlight on lock screen is set to Disabled"
   block:
-      - name: "19.7.8.1 | PATCH | L1 | Ensure Configure Windows spotlight on lock screen is set to Disabled"
+      - name: "19.7.8.1 | PATCH | Ensure Configure Windows spotlight on lock screen is set to Disabled"
         win_regedit:
             path: HKU:\.DEFAULT\Software\Policies\Microsoft\Windows\CloudContent
             name: ConfigureWindowsSpotlight
             data: 2
             type: dword
 
-      - name: "19.7.8.1 | PATCH | L1 | Ensure Configure Windows spotlight on lock screen is set to Disabled"
+      - name: "19.7.8.1 | PATCH | Ensure Configure Windows spotlight on lock screen is set to Disabled"
         win_regedit:
             path: HKCU:\Software\Policies\Microsoft\Windows\CloudContent
             name: ConfigureWindowsSpotlight
@@ -206,16 +206,16 @@
       - rule_19.7.8.1
       - patch
 
-- name: "19.7.8.2 | PATCH | L1 | Ensure Do not suggest third-party content in Windows spotlight is set to Enabled"
+- name: "19.7.8.2 | PATCH | Ensure Do not suggest third-party content in Windows spotlight is set to Enabled"
   block:
-      - name: "19.7.8.2 | PATCH | L1 | Ensure Do not suggest third-party content in Windows spotlight is set to Enabled"
+      - name: "19.7.8.2 | PATCH | Ensure Do not suggest third-party content in Windows spotlight is set to Enabled"
         win_regedit:
             path: HKU:\.DEFAULT\Software\Policies\Microsoft\Windows\CloudContent
             name: DisableThirdPartySuggestions
             data: 1
             type: dword
 
-      - name: "19.7.8.2 | PATCH | L1 | Ensure Do not suggest third-party content in Windows spotlight is set to Enabled"
+      - name: "19.7.8.2 | PATCH | Ensure Do not suggest third-party content in Windows spotlight is set to Enabled"
         win_regedit:
             path: HKCU:\Software\Policies\Microsoft\Windows\CloudContent
             name: DisableThirdPartySuggestions
@@ -229,16 +229,16 @@
       - rule_19.7.8.2
       - patch
 
-- name: "19.7.8.3 | PATCH | L2 | Ensure Do not use diagnostic data for tailored experiences is set to Enabled"
+- name: "19.7.8.3 | PATCH | Ensure Do not use diagnostic data for tailored experiences is set to Enabled"
   block:
-      - name: "19.7.8.3 | PATCH | L2 | Ensure Do not use diagnostic data for tailored experiences is set to Enabled"
+      - name: "19.7.8.3 | PATCH | Ensure Do not use diagnostic data for tailored experiences is set to Enabled"
         win_regedit:
             path: HKU:\.DEFAULT\Software\Policies\Microsoft\Windows\CloudContent
             name: DisableTailoredExperiencesWithDiagnosticData
             data: 1
             type: dword
 
-      - name: "19.7.8.3 | PATCH | L2 | Ensure Do not use diagnostic data for tailored experiences is set to Enabled"
+      - name: "19.7.8.3 | PATCH | Ensure Do not use diagnostic data for tailored experiences is set to Enabled"
         win_regedit:
             path: HKCU:\Software\Policies\Microsoft\Windows\CloudContent
             name: DisableTailoredExperiencesWithDiagnosticData
@@ -252,16 +252,16 @@
       - rule_19.7.8.3
       - patch
 
-- name: "19.7.8.4 | PATCH | L2 | Ensure Turn off all Windows spotlight features is set to Enabled"
+- name: "19.7.8.4 | PATCH | Ensure Turn off all Windows spotlight features is set to Enabled"
   block:
-      - name: "19.7.8.4 | PATCH | L2 | Ensure Turn off all Windows spotlight features is set to Enabled"
+      - name: "19.7.8.4 | PATCH | Ensure Turn off all Windows spotlight features is set to Enabled"
         win_regedit:
             path: HKU:\.DEFAULT\Software\Policies\Microsoft\Windows\CloudContent
             name: DisableWindowsSpotlightFeatures
             data: 1
             type: dword
 
-      - name: "19.7.8.4 | PATCH | L2 | Ensure Turn off all Windows spotlight features is set to Enabled"
+      - name: "19.7.8.4 | PATCH | Ensure Turn off all Windows spotlight features is set to Enabled"
         win_regedit:
             path: HKCU:\Software\Policies\Microsoft\Windows\CloudContent
             name: DisableWindowsSpotlightFeatures
@@ -275,16 +275,16 @@
       - rule_19.7.8.4
       - patch
 
-- name: "19.7.28.1 | PATCH | L1 | Ensure Prevent users from sharing files within their profile. is set to Enabled"
+- name: "19.7.28.1 | PATCH | Ensure Prevent users from sharing files within their profile. is set to Enabled"
   block:
-      - name: "19.7.28.1 | PATCH | L1 | Ensure Prevent users from sharing files within their profile. is set to Enabled"
+      - name: "19.7.28.1 | PATCH | Ensure Prevent users from sharing files within their profile. is set to Enabled"
         win_regedit:
             path: HKU:\.DEFAULT\Software\Microsoft\Windows\Currentversion\Policies\Explorer
             name: NoInplaceSharing
             data: 1
             type: dword
 
-      - name: "19.7.28.1 | PATCH | L1 | Ensure Prevent users from sharing files within their profile. is set to Enabled"
+      - name: "19.7.28.1 | PATCH | Ensure Prevent users from sharing files within their profile. is set to Enabled"
         win_regedit:
             path: HKCU:\Software\Microsoft\Windows\Currentversion\Policies\Explorer
             name: NoInplaceSharing
@@ -298,16 +298,16 @@
       - rule_19.7.28.1
       - patch
 
-- name: "19.7.43.1 | PATCH | L1 | Ensure Always install with elevated privileges is set to Disabled"
+- name: "19.7.43.1 | PATCH | Ensure Always install with elevated privileges is set to Disabled"
   block:
-      - name: "19.7.43.1 | PATCH | L1 | Ensure Always install with elevated privileges is set to Disabled"
+      - name: "19.7.43.1 | PATCH | Ensure Always install with elevated privileges is set to Disabled"
         win_regedit:
             path: HKU:\.DEFAULT\Software\Policies\Microsoft\Windows\Installer
             name: AlwaysInstallElevated
             data: 0
             type: dword
 
-      - name: "19.7.43.1 | PATCH | L1 | Ensure Always install with elevated privileges is set to Disabled"
+      - name: "19.7.43.1 | PATCH | Ensure Always install with elevated privileges is set to Disabled"
         win_regedit:
             path: HKCU:\Software\Policies\Microsoft\Windows\Installer
             name: AlwaysInstallElevated
@@ -321,16 +321,16 @@
       - rule_19.7.43.1
       - patch
 
-- name: "19.7.47.2.1 | PATCH | L2 | Ensure Prevent Codec Download is set to Enabled"
+- name: "19.7.47.2.1 | PATCH | Ensure Prevent Codec Download is set to Enabled"
   block:
-      - name: "19.7.47.2.1 | PATCH | L2 | Ensure Prevent Codec Download is set to Enabled"
+      - name: "19.7.47.2.1 | PATCH | Ensure Prevent Codec Download is set to Enabled"
         win_regedit:
             path: HKU:\.DEFAULT\Software\Policies\Microsoft\Windowsmediaplayer
             name: PreventCodecDownload
             data: 1
             type: dword
 
-      - name: "19.7.47.2.1 | PATCH | L2 | Ensure Prevent Codec Download is set to Enabled"
+      - name: "19.7.47.2.1 | PATCH | Ensure Prevent Codec Download is set to Enabled"
         win_regedit:
             path: HKCU:\Software\Policies\Microsoft\Windowsmediaplayer
             name: PreventCodecDownload

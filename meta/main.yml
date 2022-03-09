@@ -19,5 +19,7 @@ galaxy_info:
         - hardening
         - microsoft
         - windows
+    collections:
+        - community.windows
 
     dependencies: []

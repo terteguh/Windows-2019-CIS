@@ -36,11 +36,11 @@
   tags:
       - section01
 
-# - name: Execute the section 2 tasks
-#   import_tasks: section02.yml
-#   when: section02_patch | bool
-#   tags:
-#       - section02
+- name: Execute the section 2 tasks
+  import_tasks: section02.yml
+  when: section02_patch | bool
+  tags:
+      - section02
 
 # - name: Execute the section 9 tasks
 #   import_tasks: section09.yml

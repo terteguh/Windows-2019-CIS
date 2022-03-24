@@ -1,5 +1,4 @@
 Windows Server 2019 CIS
-
 =========
 ![Release](https://img.shields.io/github/v/release/ansible-lockdown/Windows-2019-CIS?style=plastic)
 

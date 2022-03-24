@@ -472,7 +472,7 @@ pass_age: 60
 
 lockoutduration: 15
 lockoutbadcount: 3
-resetlockoutcount: 40
+resetlockoutcount: 25
 passwordhistorysize: 24
 maximumpasswordage: 60
 minimumpasswordage: 1

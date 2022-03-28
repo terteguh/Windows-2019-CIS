@@ -1,6 +1,39 @@
 ---
 
-- name: Install all updates and reboot as many times as needed
+- name: "20.1 | Activate windows"
+  win_shell: cscript slmgr.vbs /ipk XXXXX-XXXXX-XXXXX-XXXXX-XXXXX
+  args:
+    chdir: C:\Windows\System32\
+  when:
+      - rule_20_1
+  tags:
+      - rule_20.1
+      - patch
+
+- name: "20.2 | Join Domain"
+  win_domain_membership:
+#      hostname: "{{ VM_NAME }}"
+    dns_domain_name: bussan.co.id
+    domain_admin_user: bussan.co.id\vcentersvc
+    domain_admin_password: "{{ domain_admin_password }}"
+    domain_ou_path: OU=ansible,OU=Test_Vendor,DC=bussan,DC=co,DC=id
+    state: domain
+  register: domain_state
+  when:
+      - rule_20_2
+  tags:
+      - rule_20.2
+      - patch
+
+- win_reboot:
+  when: domain_state.reboot_required
+
+- name: "20.3 | Install all updates and reboot as many times as needed"
   ansible.windows.win_updates:
     category_names: '*'
     reboot: yes
+  when:
+      - rule_20_3
+  tags:
+      - rule_20.3
+      - patch

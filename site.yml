@@ -2,7 +2,8 @@
 - hosts: all
   vars:
       is_container: false
-
+  vars_files:
+  - secret.yml
   roles:
       - role: "{{ playbook_dir }}"
         system_is_container: "{{ is_container | default(false) }}"

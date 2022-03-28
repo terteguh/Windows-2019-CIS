@@ -480,7 +480,7 @@ lockoutduration: 15
 lockoutbadcount: 3
 resetlockoutcount: 30
 passwordhistorysize: 18
-maximumpasswordage: 60
+maximumpasswordage: 90
 minimumpasswordage: 1
 minimumpasswordlength: 14
 

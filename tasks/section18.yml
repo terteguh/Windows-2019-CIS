@@ -2760,30 +2760,30 @@
       - rule_18.9.102.2
       - patch
 
-# - name: "18.9.102.3 | PATCH | L1 | Ensure Configure Automatic Updates Scheduled install day is set to 0 - Every day"
-#   win_regedit:
-#       path: HKLM:\Software\Policies\Microsoft\Windows\Windowsupdate\Au
-#       name: ScheduledInstallDay
-#       data: 0
-#       type: dword
-#   when:
-#       - rule_18_9_102_3
-#   tags:
-#       - level1-domaincontroller
-#       - level1-memberserver
-#       - rule_18.9.102.3
-#       - patch
+- name: "18.9.102.3 | PATCH | L1 | Ensure Configure Automatic Updates Scheduled install day is set to 0 - Every day"
+  win_regedit:
+      path: HKLM:\Software\Policies\Microsoft\Windows\Windowsupdate\Au
+      name: ScheduledInstallDay
+      data: 0
+      type: dword
+  when:
+      - rule_18_9_102_3
+  tags:
+      - level1-domaincontroller
+      - level1-memberserver
+      - rule_18.9.102.3
+      - patch
 
-# - name: "18.9.102.4 | PATCH | L1 | Ensure No auto-restart with logged on users for scheduled automatic updates installations is set to Disabled"
-#   win_regedit:
-#       path: HKLM:\Software\Policies\Microsoft\Windows\Windowsupdate\Au
-#       name: NoAutoRebootWithLoggedOnUsers
-#       data: 0
-#       type: dword
-#   when:
-#       - rule_18_9_102_4
-#   tags:
-#       - level1-domaincontroller
-#       - level1-memberserver
-#       - rule_18.9.102.4
-#       - patch
+- name: "18.9.102.4 | PATCH | L1 | Ensure No auto-restart with logged on users for scheduled automatic updates installations is set to Disabled"
+  win_regedit:
+      path: HKLM:\Software\Policies\Microsoft\Windows\Windowsupdate\Au
+      name: NoAutoRebootWithLoggedOnUsers
+      data: 0
+      type: dword
+  when:
+      - rule_18_9_102_4
+  tags:
+      - level1-domaincontroller
+      - level1-memberserver
+      - rule_18.9.102.4
+      - patch

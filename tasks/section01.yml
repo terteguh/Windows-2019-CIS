@@ -22,17 +22,17 @@
       - rule_1.1.1
       - patch
 
-- name: "1.1.2 | PATCH | L1 | Ensure Maximum password age is set to 60 or fewer days but not 0"
+- name: "1.1.2 | PATCH | L1 | Ensure Maximum password age is set to 90 or fewer days but not 0"
   block:
-      - name: "1.1.2 | AUDIT | L1 | Ensure Maximum password age is set to 60 or fewer days but not 0"
+      - name: "1.1.2 | AUDIT | L1 | Ensure Maximum password age is set to 90 or fewer days but not 0"
         assert:
-            that: maximumpasswordage | int is version('60', '<=')
-            fail_msg: "Maximum password age must be configured to 60 days or less and variable maximumpasswordage is set to {{ maximumpasswordage }}"
+            that: maximumpasswordage | int is version('90', '<=')
+            fail_msg: "Maximum password age must be configured to 90 days or less and variable maximumpasswordage is set to {{ maximumpasswordage }}"
         changed_when: false
         ignore_errors: true
         register: result
 
-      - name: "1.1.2 | PATCH | L1 | Ensure Maximum password age is set to 60 or fewer days but not 0"
+      - name: "1.1.2 | PATCH | L1 | Ensure Maximum password age is set to 90 or fewer days but not 0"
         win_security_policy:
             section: System Access
             key: MaximumPasswordAge

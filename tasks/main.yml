@@ -65,3 +65,9 @@
 #   when: section19_patch | bool
 #   tags:
 #       - section19
+
+- name: Execute the section 20 tasks
+  import_tasks: section20.yml
+  when: section20_patch | bool
+  tags:
+      - section20

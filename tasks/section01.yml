@@ -1,15 +1,15 @@
 ---
-- name: "1.1.1 | PATCH | L1 | Ensure Enforce password history is set to 24 or more passwords"
+- name: "1.1.1 | PATCH | L1 | Ensure Enforce password history is set to 18 or more passwords"
   block:
-      - name: "1.1.1 | AUDIT | L1 | Ensure Enforce password history is set to 24 or more passwords"
+      - name: "1.1.1 | AUDIT | L1 | Ensure Enforce password history is set to 18 or more passwords"
         assert:
-            that: passwordhistorysize | int is version('24', '>=')
-            fail_msg: "Password history must be configured to 24 passwords remembered and variable passwordhistorysize is set to {{ passwordhistorysize }}"
+            that: passwordhistorysize | int is version('18', '>=')
+            fail_msg: "Password history must be configured to 18 passwords remembered and variable passwordhistorysize is set to {{ passwordhistorysize }}"
         changed_when: false
         ignore_errors: true
         register: result
 
-      - name: "1.1.1 | PATCH | L1 | Ensure Enforce password history is set to 24 or more passwords"
+      - name: "1.1.1 | PATCH | L1 | Ensure Enforce password history is set to 18 or more passwords"
         win_security_policy:
             section: System Access
             key: PasswordHistorySize

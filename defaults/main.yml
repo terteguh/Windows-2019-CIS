@@ -6,6 +6,8 @@ section17_patch: yes
 section18_patch: yes
 section19_patch: yes
 
+section20_patch: yes
+
 min_ansible_version: "2.6"
 
 # We've defined complexity-high to mean that we cannot automatically remediate
@@ -473,7 +475,7 @@ pass_age: 60
 lockoutduration: 15
 lockoutbadcount: 3
 resetlockoutcount: 30
-passwordhistorysize: 24
+passwordhistorysize: 18
 maximumpasswordage: 60
 minimumpasswordage: 1
 minimumpasswordlength: 14

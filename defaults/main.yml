@@ -476,13 +476,13 @@ sedebugprivilege: "*S-1-5-32-544"
 
 pass_age: 60
 
-lockoutduration: 15
-lockoutbadcount: 3
-resetlockoutcount: 30
+lockoutduration: 0
+lockoutbadcount: 5
+resetlockoutcount: 30   # maximum 30. more than this error
 passwordhistorysize: 18
 maximumpasswordage: 90
 minimumpasswordage: 1
-minimumpasswordlength: 14
+minimumpasswordlength: 8
 
 newadministratorname: renamedadmin
 newguestname: renamedguest

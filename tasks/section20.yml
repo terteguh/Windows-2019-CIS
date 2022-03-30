@@ -1,5 +1,9 @@
 ---
 
+- name: Disable NetBIOS system wide
+  community.windows.win_netbios:
+    state: disabled
+
 - name: "20.1 | Activate windows"
   win_shell: cscript slmgr.vbs /ipk XXXXX-XXXXX-XXXXX-XXXXX-XXXXX
   args:

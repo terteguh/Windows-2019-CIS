@@ -68,17 +68,17 @@
       - rule_1.1.3
       - patch
 
-- name: "1.1.4 | PATCH | L1 | Ensure Minimum password length is set to 14 or more characters"
+- name: "1.1.4 | PATCH | L1 | Ensure Minimum password length is set to 8 or more characters"
   block:
-      - name: "1.1.4 | AUDIT | L1 | Ensure Minimum password length is set to 14 or more characters"
+      - name: "1.1.4 | AUDIT | L1 | Ensure Minimum password length is set to 8 or more characters"
         assert:
-            that: minimumpasswordlength is version('14', '>=')
-            fail_msg: "Minimum password length must be configured to 14 characters and variable minimumpasswordlength is set to {{ minimumpasswordlength }} characters"
+            that: minimumpasswordlength is version('8', '>=')
+            fail_msg: "Minimum password length must be configured to 8 characters and variable minimumpasswordlength is set to {{ minimumpasswordlength }} characters"
         changed_when: false
         ignore_errors: true
         register: result
 
-      - name: "1.1.4 | PATCH | L1 | Ensure Minimum password length is set to 14 or more characters"
+      - name: "1.1.4 | PATCH | L1 | Ensure Minimum password length is set to 8 or more characters"
         win_security_policy:
             section: System Access
             key: MinimumPasswordLength
@@ -118,17 +118,17 @@
       - patch
 
 # Speelman | added because of this error "Failed to import secedit.ini file from C:\\Users\\vagrant\\AppData\\Local\\Temp\\tmp81F3.tmp
-- name: "1.2.1 | AUDIT | L1 | Ensure Account lockout duration is set to 15 or more minutes"
+- name: "1.2.1 | AUDIT | L1 | Ensure Account lockout duration is set to 0 or more minutes"
   block:
-      - name: "1.2.1 | AUDIT | L1 | Ensure Account lockout duration is set to 15 or more minutes"
+      - name: "1.2.1 | AUDIT | L1 | Ensure Account lockout duration is set to 0 or more minutes"
         assert:
-            that: lockoutduration | int is version('15', '<=')
-            fail_msg: "Must have the period of time before the bad logon counter is reset configured to 15 minutes or greater and variable lockoutduration is set to {{ lockoutduration }}"
+            that: lockoutduration | int is version('0', '<=')
+            fail_msg: "Must have the period of time before the bad logon counter is reset configured to 0 minutes or greater and variable lockoutduration is set to {{ lockoutduration }}"
         changed_when: false
         ignore_errors: true
         register: result
 
-      - name: "1.2.1 | PATCH | L1 | Ensure Account lockout duration is set to 15 or more minutes"
+      - name: "1.2.1 | PATCH | L1 | Ensure Account lockout duration is set to 0 or more minutes"
         win_security_policy:
             section: System Access
             key: LockoutDuration
@@ -143,7 +143,7 @@
       - patch
 
 # This rule must be applied first to make rule_1.2.1 and rule_1.2.3 applicable
-- name: "1.2.2 | PATCH | L1 | Ensure Account lockout threshold is set to 10 or fewer invalid logon attempts but not 0"
+- name: "1.2.2 | PATCH | L1 | Ensure Account lockout threshold is set to 5 or fewer invalid logon attempts but not 0"
   win_security_policy:
       section: System Access
       key: LockoutBadCount

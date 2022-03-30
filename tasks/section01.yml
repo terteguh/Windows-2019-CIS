@@ -156,17 +156,17 @@
       - rule_1.2.2
       - patch
 
-- name: "1.2.3 | PATCH | L1 | Ensure Reset account lockout counter after is set to 15 or more minutes"
+- name: "1.2.3 | PATCH | L1 | Ensure Reset account lockout counter after is set to 30 or more minutes"
   block:
-      - name: "1.2.3 | AUDIT | L1 | Ensure Reset account lockout counter after is set to 15 or more minutes"
+      - name: "1.2.3 | AUDIT | L1 | Ensure Reset account lockout counter after is set to 30 or more minutes"
         assert:
-            that: resetlockoutcount | int is version('15', '>=')
-            fail_msg: "Must have the period of time before the bad logon counter is reset configured to 15 minutes or greater and variable resetlockoutcount is set to {{ resetlockoutcount }}"
+            that: resetlockoutcount | int is version('30', '>=')
+            fail_msg: "Must have the period of time before the bad logon counter is reset configured to 30 minutes or greater and variable resetlockoutcount is set to {{ resetlockoutcount }}"
         changed_when: false
         ignore_errors: true
         register: result
 
-      - name: "1.2.3 | PATCH | L1 | Ensure Reset account lockout counter after is set to 15 or more minutes"
+      - name: "1.2.3 | PATCH | L1 | Ensure Reset account lockout counter after is set to 30 or more minutes"
         win_security_policy:
             section: System Access
             key: ResetLockoutCount

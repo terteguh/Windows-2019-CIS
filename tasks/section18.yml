@@ -31,7 +31,7 @@
       - rule_18.9.102.2
       - patch
 
-- name: "18.9.102.2 | PATCH | L1 | Enable automatic notification of patch availability"
+- name: "18.9.102.2 | Enable automatic notification of patch availability"
   win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Windowsupdate\Au
       name: AUOptions

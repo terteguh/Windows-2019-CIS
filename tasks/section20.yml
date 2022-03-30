@@ -1,10 +1,10 @@
 ---
 
-- name: Disable NetBIOS system wide
+- name: "20.1 | Disable NetBIOS system wide"
   community.windows.win_netbios:
     state: disabled
 
-- name: "20.1 | Activate windows"
+- name: "20.2 | Activate windows"
   win_shell: cscript slmgr.vbs /ipk XXXXX-XXXXX-XXXXX-XXXXX-XXXXX
   args:
     chdir: C:\Windows\System32\
@@ -14,7 +14,7 @@
       - rule_20.1
       - patch
 
-- name: "20.2 | Join Domain"
+- name: "20.3 | Join Domain"
   win_domain_membership:
 #      hostname: "{{ VM_NAME }}"
     dns_domain_name: bussan.co.id
@@ -31,7 +31,7 @@
       - patch
 
 
-- name: "20.3 | Install all updates and reboot as many times as needed"
+- name: "20.4 | Install all updates and reboot as many times as needed"
   ansible.windows.win_updates:
     category_names: '*'
     reboot: yes

@@ -42,11 +42,7 @@
   tags:
       - section02
 
-# - name: Execute the section 9 tasks
-#   import_tasks: section09.yml
-#   when: section09_patch | bool
-#   tags:
-#       - section09
+
 
 - name: Execute the section 17 tasks
   import_tasks: section17.yml
@@ -60,11 +56,7 @@
   tags:
       - section18
 
-# - name: Execute the section 19 tasks
-#   import_tasks: section19.yml
-#   when: section19_patch | bool
-#   tags:
-#       - section19
+
 
 - name: Execute the section 20 tasks
   import_tasks: section20.yml

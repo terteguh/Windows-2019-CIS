@@ -25,44 +25,44 @@
   tags:
       - always
 
-- name: Include the preliminary tasks
-  include_tasks: prelim.yml
-  tags:
-      - prelim_tasks
+# - name: Include the preliminary tasks
+#   include_tasks: prelim.yml
+#   tags:
+#       - prelim_tasks
 
-- name: Execute the section 1 tasks
-  import_tasks: section01.yml
-  when: section01_patch | bool
-  tags:
-      - section01
+# - name: Execute the section 1 tasks
+#   import_tasks: section01.yml
+#   when: section01_patch | bool
+#   tags:
+#       - section01
 
-- name: Execute the section 2 tasks
-  import_tasks: section02.yml
-  when: section02_patch | bool
-  tags:
-      - section02
-
-
-
-- name: Execute the section 17 tasks
-  import_tasks: section17.yml
-  when: section17_patch | bool
-  tags:
-      - section17
-
-- name: Execute the section 18 tasks
-  import_tasks: section18.yml
-  when: section18_patch | bool
-  tags:
-      - section18
+# - name: Execute the section 2 tasks
+#   import_tasks: section02.yml
+#   when: section02_patch | bool
+#   tags:
+#       - section02
 
 
 
-- name: Execute the section 20 tasks
-  import_tasks: section20.yml
-  when: section20_patch | bool
-  tags:
-      - section20
+# - name: Execute the section 17 tasks
+#   import_tasks: section17.yml
+#   when: section17_patch | bool
+#   tags:
+#       - section17
+
+# - name: Execute the section 18 tasks
+#   import_tasks: section18.yml
+#   when: section18_patch | bool
+#   tags:
+#       - section18
+
+
+
+# - name: Execute the section 20 tasks
+#   import_tasks: section20.yml
+#   when: section20_patch | bool
+#   tags:
+#       - section20
 
 - name: Execute the section 21 tasks
   import_tasks: section21.yml

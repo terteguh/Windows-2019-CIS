@@ -11,11 +11,11 @@
 
 - name: install-sep
   win_package:
-  path: C:\Temp\setup.exe
-  creates_service: "Symantec Endpoint Protection"
-  #product_id: '{BB021296-8731-4B36-9018-CCD85185CDC2}'
-  state: present
-  #validate_certs: no
+    path: C:\Temp\setup.exe
+    creates_service: "Symantec Endpoint Protection"
+    #product_id: '{BB021296-8731-4B36-9018-CCD85185CDC2}'
+    state: present
+    #validate_certs: no
   register: SEPInstall
 
 - name: install-sep | reboot if required

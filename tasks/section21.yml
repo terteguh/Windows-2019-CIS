@@ -1,0 +1,36 @@
+---
+
+
+- name: install-sep | check to see if SEP service is installed
+  win_service:
+    name: "Symantec Endpoint Protection"
+  register: SEPserviceresult
+
+- name: install-sep
+  win_package:
+  path: https://5111rsgpwam1pmg1admin.blob.core.usgovcloudapi.net/cloudops/tools/ansible/symantec/sep/windows/setup12.exe
+  creates_service: "Symantec Endpoint Protection"
+  #product_id: '{BB021296-8731-4B36-9018-CCD85185CDC2}'
+  state: present
+  #validate_certs: no
+  register: SEPInstall
+
+- name: install-sep | reboot if required
+  win_reboot:
+  when: SEPInstall.reboot_required
+
+- name: install-sep | check to see if SEP service is installed
+  win_service:
+    name: "Symantec Endpoint Protection"
+  register: SEPserviceresult
+
+- name: install-sep | if SEP service is not installed, fail playbook 
+  fail:
+    msg: "SEP did not install, do no continue"
+  when:
+    - SEPserviceresult['exists'] == false
+
+- name: Print some debug information 
+  debug: 
+      msg: "Windows | Install SEP | System {{ inventory_hostname }} has OS {{ansible_distribution}}"   
+  tags: debug_info

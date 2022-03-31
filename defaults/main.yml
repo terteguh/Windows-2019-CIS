@@ -454,8 +454,13 @@ rule_19_7_43_1: true
 rule_19_7_47_2_1: true
 
 rule_20_1: false
-rule_20_2: false
-rule_20_3: false
+rule_20_2: true
+rule_20_3: true
+rule_20_4: true
+rule_20_5: false
+rule_20_6: false
+rule_20_7: true
+
 
 # Section 2 Variables
 

@@ -1,5 +1,8 @@
 ---
-
+- name: Copy a single file
+  ansible.windows.win_copy:
+    src: /root/window/SEP/setup.exe
+    dest: C:\Temp\setup.exe
 
 - name: install-sep | check to see if SEP service is installed
   win_service:
@@ -8,7 +11,7 @@
 
 - name: install-sep
   win_package:
-  path: https://5111rsgpwam1pmg1admin.blob.core.usgovcloudapi.net/cloudops/tools/ansible/symantec/sep/windows/setup12.exe
+  path: C:\Temp\setup.exe
   creates_service: "Symantec Endpoint Protection"
   #product_id: '{BB021296-8731-4B36-9018-CCD85185CDC2}'
   state: present

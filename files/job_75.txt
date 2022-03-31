@@ -1,0 +1,296 @@
+SSH password: 
+Vault password: 
+
+PLAY [all] *********************************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [192.168.0.20]
+
+TASK [/runner/project : Gather distribution info] ******************************
+skipping: [192.168.0.20]
+
+TASK [/runner/project : Check OS version and family] ***************************
+ok: [192.168.0.20] => {
+    "changed": false,
+    "msg": "Microsoft Windows Server 2019 Standard Evaluation 10 is the detected operating system."
+}
+
+TASK [/runner/project : Check ansible version] *********************************
+ok: [192.168.0.20] => {
+    "changed": false,
+    "msg": "All assertions passed"
+}
+
+TASK [/runner/project : Include the preliminary tasks] *************************
+included: /runner/project/tasks/prelim.yml for 192.168.0.20
+
+TASK [/runner/project : Set fact is system is standalone] **********************
+ok: [192.168.0.20]
+
+TASK [/runner/project : Set fact if domain controller role] ********************
+skipping: [192.168.0.20]
+
+TASK [/runner/project : set fact if domain member server] **********************
+skipping: [192.168.0.20]
+
+TASK [/runner/project : Get Windows installation type] *************************
+ok: [192.168.0.20]
+
+TASK [/runner/project : Set Windows installation type] *************************
+ok: [192.168.0.20]
+
+TASK [/runner/project : 1.1.1 | AUDIT | L1 | Ensure Enforce password history is set to 18 or more passwords] ***
+ok: [192.168.0.20] => {
+    "changed": false,
+    "msg": "All assertions passed"
+}
+
+TASK [/runner/project : 1.1.1 | PATCH | L1 | Ensure Enforce password history is set to 18 or more passwords] ***
+changed: [192.168.0.20]
+
+TASK [/runner/project : 1.1.2 | AUDIT | L1 | Ensure Maximum password age is set to 90 or fewer days but not 0] ***
+ok: [192.168.0.20] => {
+    "changed": false,
+    "msg": "All assertions passed"
+}
+
+TASK [/runner/project : 1.1.2 | PATCH | L1 | Ensure Maximum password age is set to 90 or fewer days but not 0] ***
+changed: [192.168.0.20]
+
+TASK [/runner/project : 1.1.3 | AUDIT | L1 | Ensure Minimum password age is set to 1 or more days] ***
+ok: [192.168.0.20] => {
+    "changed": false,
+    "msg": "All assertions passed"
+}
+
+TASK [/runner/project : 1.1.3 | PATCH | L1 | Ensure Minimum password age is set to 1 or more days] ***
+changed: [192.168.0.20]
+
+TASK [/runner/project : 1.1.4 | AUDIT | L1 | Ensure Minimum password length is set to 8 or more characters] ***
+ok: [192.168.0.20] => {
+    "changed": false,
+    "msg": "All assertions passed"
+}
+
+TASK [/runner/project : 1.1.4 | PATCH | L1 | Ensure Minimum password length is set to 8 or more characters] ***
+changed: [192.168.0.20]
+
+TASK [/runner/project : 1.1.5 | PATCH | L1 | Ensure Password must meet complexity requirements is set to Enabled] ***
+ok: [192.168.0.20]
+
+TASK [/runner/project : 1.1.6 | PATCH | L1 | Ensure Store passwords using reversible encryption is set to Disabled] ***
+ok: [192.168.0.20]
+
+TASK [/runner/project : 1.2.1 | AUDIT | L1 | Ensure Account lockout duration is set to 0 or more minutes] ***
+skipping: [192.168.0.20]
+
+TASK [/runner/project : 1.2.1 | PATCH | L1 | Ensure Account lockout duration is set to 0 or more minutes] ***
+skipping: [192.168.0.20]
+
+TASK [/runner/project : 1.2.2 | PATCH | L1 | Ensure Account lockout threshold is set to 5 or fewer invalid logon attempts but not 0] ***
+changed: [192.168.0.20]
+
+TASK [/runner/project : 1.2.3 | AUDIT | L1 | Ensure Reset account lockout counter after is set to 30 or more minutes] ***
+ok: [192.168.0.20] => {
+    "changed": false,
+    "msg": "All assertions passed"
+}
+
+TASK [/runner/project : 1.2.3 | PATCH | L1 | Ensure Reset account lockout counter after is set to 30 or more minutes] ***
+ok: [192.168.0.20]
+
+TASK [/runner/project : 2.3.1.3 | PATCH | L1 | Ensure Accounts Guest account status is set to Disabled MS only] ***
+ok: [192.168.0.20]
+
+TASK [/runner/project : 2.3.7.3 | PATCH | L1 | Ensure Interactive logon Machine inactivity limit is set to 900 or fewer seconds but not 0] ***
+changed: [192.168.0.20]
+
+TASK [/runner/project : 2.3.8.3 | PATCH | L1 | Ensure Microsoft network client Send unencrypted password to third-party SMB servers is set to Disabled] ***
+ok: [192.168.0.20]
+
+TASK [/runner/project : 2.3.11.2 | PATCH | L1 | Ensure Network security Allow LocalSystem NULL session fallback is set to Disabled] ***
+changed: [192.168.0.20]
+
+TASK [/runner/project : 2.3.11.7 | PATCH | L1 | Ensure Network security LAN Manager authentication level is set to Send NTLMv2 response only. Refuse LM  NTLM] ***
+changed: [192.168.0.20]
+
+TASK [/runner/project :  17.1.1 | AUDIT | L1 | Ensure Audit Credential Validation is set to Success and Failure] ***
+ok: [192.168.0.20]
+
+TASK [/runner/project :  17.1.1 | PATCH | L1 | Ensure Audit Credential Validation is set to Success and Failure | Success] ***
+skipping: [192.168.0.20]
+
+TASK [/runner/project :  17.1.1 | PATCH | L1 | Ensure Audit Credential Validation is set to Success and Failure | Failure] ***
+changed: [192.168.0.20]
+
+TASK [/runner/project :  17.2.1 | AUDIT | L1 | Ensure Audit Application Group Management is set to Success and Failure] ***
+ok: [192.168.0.20]
+
+TASK [/runner/project :  17.2.1 | PATCH | L1 | Ensure Audit Application Group Management is set to Success and Failure | Success] ***
+changed: [192.168.0.20]
+
+TASK [/runner/project :  17.2.1 | PATCH | L1 | Ensure Audit Application Group Management is set to Success and Failure | Failure] ***
+changed: [192.168.0.20]
+
+TASK [/runner/project :  17.2.2 | AUDIT | L1 | Ensure Audit Computer Account Management is set to include Success DC only] ***
+skipping: [192.168.0.20]
+
+TASK [/runner/project :  17.2.2 | PATCH | L1 | Ensure Audit Computer Account Management is set to include Success DC only] ***
+skipping: [192.168.0.20]
+
+TASK [/runner/project :  17.2.3 | AUDIT | L1 | Ensure Audit Distribution Group Management is set to include Success DC only] ***
+skipping: [192.168.0.20]
+
+TASK [/runner/project :  17.2.3 | PATCH | L1 | Ensure Audit Distribution Group Management is set to include Success DC only] ***
+skipping: [192.168.0.20]
+
+TASK [/runner/project :  17.2.4 | AUDIT | L1 | Ensure Audit Other Account Management Events is set to include Success DC only] ***
+skipping: [192.168.0.20]
+
+TASK [/runner/project :  17.2.4 | PATCH | L1 | Ensure Audit Other Account Management Events is set to include Success DC only] ***
+skipping: [192.168.0.20]
+
+TASK [/runner/project :  17.2.5 | AUDIT | L1 | Ensure Audit Security Group Management is set to include Success] ***
+ok: [192.168.0.20]
+
+TASK [/runner/project :  17.2.5 | PATCH | L1 | Ensure Audit Security Group Management is set to include Success] ***
+skipping: [192.168.0.20]
+
+TASK [/runner/project :  17.2.6 | AUDIT | L1 | Ensure Audit User Account Management is set to Success and Failure] ***
+ok: [192.168.0.20]
+
+TASK [/runner/project :  17.2.6 | PATCH | L1 | Ensure Audit User Account Management is set to Success and Failure | Success] ***
+skipping: [192.168.0.20]
+
+TASK [/runner/project :  17.2.6 | PATCH | L1 | Ensure Audit User Account Management is set to Success and Failure | Failure] ***
+changed: [192.168.0.20]
+
+TASK [/runner/project :  17.3.2 | AUDIT | L1 | Ensure Audit Process Creation is set to include Success] ***
+ok: [192.168.0.20]
+
+TASK [/runner/project :  17.3.2 | PATCH | L1 | Ensure Audit Process Creation is set to include Success] ***
+changed: [192.168.0.20]
+
+TASK [/runner/project :  17.4.1 | AUDIT | L1 | Ensure Audit Directory Service Access is set to include Failure DC only] ***
+ok: [192.168.0.20]
+
+TASK [/runner/project :  17.4.1 | PATCH | L1 | Ensure Audit Directory Service Access is set to include Failure DC only] ***
+skipping: [192.168.0.20]
+
+TASK [/runner/project :  17.4.2 | AUDIT | L1 | Ensure Audit Directory Service Changes is set to include Success DC only] ***
+ok: [192.168.0.20]
+
+TASK [/runner/project :  17.4.2 | PATCH | L1 | Ensure Audit Directory Service Changes is set to include Success DC only] ***
+changed: [192.168.0.20]
+
+TASK [/runner/project :  17.5.1 | AUDIT | L1 | Ensure Audit Account Lockout is set to include Failure] ***
+ok: [192.168.0.20]
+
+TASK [/runner/project :  17.5.1 | PATCH | L1 | Ensure Audit Account Lockout is set to include Failure] ***
+changed: [192.168.0.20]
+
+TASK [/runner/project :  17.5.3 | AUDIT | L1 | Ensure Audit Logoff is set to include Success] ***
+ok: [192.168.0.20]
+
+TASK [/runner/project :  17.5.3 | PATCH | L1 | Ensure Audit Logoff is set to include Success] ***
+skipping: [192.168.0.20]
+
+TASK [/runner/project :  17.5.4 | AUDIT | L1 | Ensure Audit Logon is set to Success and Failure] ***
+ok: [192.168.0.20]
+
+TASK [/runner/project :  17.5.4 | PATCH | L1 | Ensure Audit Logon is set to Success and Failure | Success] ***
+skipping: [192.168.0.20]
+
+TASK [/runner/project :  17.5.4 | PATCH | L1 | Ensure Audit Logon is set to Success and Failure | Failure] ***
+skipping: [192.168.0.20]
+
+TASK [/runner/project :  17.5.5 | AUDIT | L1 | Ensure Audit Other LogonLogoff Events is set to Success and Failure] ***
+ok: [192.168.0.20]
+
+TASK [/runner/project :  17.5.5 | PATCH | L1 | Ensure Audit Other LogonLogoff Events is set to Success and Failure | Success] ***
+changed: [192.168.0.20]
+
+TASK [/runner/project :  17.5.5 | PATCH | L1 | Ensure Audit Other LogonLogoff Events is set to Success and Failure | Failure] ***
+changed: [192.168.0.20]
+
+TASK [/runner/project :  17.5.6 | AUDIT | L1 | Ensure Audit Special Logon is set to include Success] ***
+ok: [192.168.0.20]
+
+TASK [/runner/project :  17.5.6 | PATCH | L1 | Ensure Audit Special Logon is set to include Success] ***
+skipping: [192.168.0.20]
+
+TASK [/runner/project :  17.6.1 | AUDIT | L1 | Ensure Audit Detailed File Share is set to include Failure] ***
+ok: [192.168.0.20]
+
+TASK [/runner/project :  17.6.1 | PATCH | L1 | Ensure Audit Detailed File Share is set to include Failure] ***
+changed: [192.168.0.20]
+
+TASK [/runner/project :  17.6.2 | AUDIT | L1 | Ensure Audit File Share is set to Success and Failure] ***
+ok: [192.168.0.20]
+
+TASK [/runner/project :  17.6.2 | PATCH | L1 | Ensure Audit File Share is set to Success and Failure] ***
+changed: [192.168.0.20]
+
+TASK [/runner/project :  17.6.2 | PATCH | L1 | Ensure Audit File Share is set to Success and Failure] ***
+changed: [192.168.0.20]
+
+TASK [/runner/project :  17.6.3 | PATCH | L1 | Ensure Audit Other Object Access Events is set to Success and Failure] ***
+changed: [192.168.0.20]
+
+TASK [/runner/project :  17.6.4 | AUDIT | L1 | Ensure Audit Removable Storage is set to Success and Failure] ***
+ok: [192.168.0.20]
+
+TASK [/runner/project :  17.6.4 | PATCH | L1 | Ensure Audit Removable Storage is set to Success and Failure] ***
+changed: [192.168.0.20]
+
+TASK [/runner/project :  17.6.4 | PATCH | L1 | Ensure Audit Removable Storage is set to Success and Failure] ***
+changed: [192.168.0.20]
+
+TASK [/runner/project :  17.8.1 | AUDIT | L1 | Ensure Audit Sensitive Privilege Use is set to Success and Failure] ***
+ok: [192.168.0.20]
+
+TASK [/runner/project :  17.8.1 | PATCH | L1 | Ensure Audit Sensitive Privilege Use is set to Success and Failure | Success] ***
+changed: [192.168.0.20]
+
+TASK [/runner/project :  17.8.1 | PATCH | L1 | Ensure Audit Sensitive Privilege Use is set to Success and Failure | Failure] ***
+changed: [192.168.0.20]
+
+TASK [/runner/project : 18.9.8.3 | PATCH | L1 | Ensure Turn off Autoplay is set to Enabled All drives] ***
+changed: [192.168.0.20]
+
+TASK [/runner/project : 18.9.102.2 | PATCH | L1 | Ensure Configure Automatic Updates is set to Enabled] ***
+changed: [192.168.0.20]
+
+TASK [/runner/project : 18.9.102.2 | Enable automatic notification of patch availability] ***
+changed: [192.168.0.20]
+
+TASK [/runner/project : 18.9.102.3 | PATCH | L1 | Ensure Configure Automatic Updates Scheduled install day is set to 0 - Every day] ***
+changed: [192.168.0.20]
+
+TASK [/runner/project : 18.9.102.4 | PATCH | L1 | Ensure No auto-restart with logged on users for scheduled automatic updates installations is set to Disabled] ***
+changed: [192.168.0.20]
+
+TASK [/runner/project : 20.1 | Activate windows] *******************************
+skipping: [192.168.0.20]
+
+TASK [/runner/project : 20.2 | Disable NetBIOS system wide] ********************
+changed: [192.168.0.20]
+
+TASK [/runner/project : 20.3 | Set spooler service startup mode to manual and ensure it is stopped] ***
+changed: [192.168.0.20]
+
+TASK [/runner/project : 20.4 | Remove C pagefile] ******************************
+ok: [192.168.0.20]
+
+TASK [/runner/project : 20.6 | Join Domain] ************************************
+skipping: [192.168.0.20]
+
+TASK [/runner/project : 20.7 | Install all updates and reboot as many times as needed] ***
+changed: [192.168.0.20]
+
+TASK [/runner/project : Copy a single file] ************************************
+fatal: [192.168.0.20]: FAILED! => {"msg": "The conditional check 'section21_patch | bool' failed. The error was: error while evaluating conditional (section21_patch | bool): 'section21_patch' is undefined\\n\\nThe error appears to be in '/runner/project/tasks/section21.yml': line 2, column 3, but may\\nbe elsewhere in the file depending on the exact syntax problem.\\n\\nThe offending line appears to be:\\n\\n---\\n- name: Copy a single file\\n  ^ here\\n"}
+
+PLAY RECAP *********************************************************************
+192.168.0.20               : ok=67   changed=33   unreachable=0    failed=1    skipped=21   rescued=0    ignored=0   
+

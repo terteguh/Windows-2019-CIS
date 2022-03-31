@@ -1,7 +1,7 @@
 ---
 - name: Copy a single file
   ansible.windows.win_copy:
-    src: /root/window/SEP/setup.exe
+    src: /var/lib/awx/projects/SEP/setup.exe
     dest: C:\Temp\setup.exe
 
 - name: install-sep | check to see if SEP service is installed

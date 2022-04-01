@@ -33,7 +33,9 @@
 - name: "20.4 | Remove C pagefile"
   community.windows.win_pagefile:
     drive: C
-    state: absent
+    remove_all: yes
+    automatic: no
+    state: present
   when:
       - rule_20_4
   tags:

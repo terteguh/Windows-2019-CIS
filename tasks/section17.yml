@@ -62,7 +62,7 @@
         when: "'Success' not in rule_17_2_2_audit.stdout"
   when:
       - rule_17_2_2
-      - ansible_windows_domain_role == "Primary domain controller"
+      # - ansible_windows_domain_role == "Primary domain controller"
   tags:
       - level1-domaincontroller
       - rule_17.2.2
@@ -81,7 +81,7 @@
         when: "'Success' not in rule_17_2_3_audit.stdout"
   when:
       - rule_17_2_3
-      - ansible_windows_domain_role == "Primary domain controller"
+      # - ansible_windows_domain_role == "Primary domain controller"
   tags:
       - level1-domaincontroller
       - rule_17.2.3
@@ -100,7 +100,7 @@
         when: "'Success' not in rule_17_2_4_audit.stdout"
   when:
       - rule_17_2_4
-      - ansible_windows_domain_role == "Primary domain controller"
+      # - ansible_windows_domain_role == "Primary domain controller"
   tags:
       - level1-domaincontroller
       - rule_17.2.4
@@ -178,8 +178,8 @@
         register: rule_17_4_1_audit
 
       - name: " 17.4.1 | PATCH | L1 | Ensure Audit Directory Service Access is set to include Failure DC only"
-        win_shell: AuditPol /set /subcategory:"Directory Service Access" /success:enable
-        when: "'Success' not in rule_17_4_1_audit.stdout"
+        win_shell: AuditPol /set /subcategory:"Directory Service Access" /failure:enable
+        when: "'Failure' not in rule_17_4_1_audit.stdout"
   when:
       - rule_17_4_1
   tags:
